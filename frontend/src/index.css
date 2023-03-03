@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@layer components {
+
+    .form-control {
+        @apply flex flex-col justify-center items-center mx-8 mt-8
+    }
+    .input-control {
+        @apply w-full border-[1px] border-[#ccc] rounded-md p-2
+        my-2
+    }
+
+    .input-error{
+        @apply w-full border-[2px] border-red-500 rounded-md p-2
+        my-2
+    }
+
+    .input-error::placeholder {
+        @apply text-red-500 text-sm
+    }
+
+    .input-control::placeholder {
+        @apply text-neutral-600 text-sm
+    }
+
+    .badge{
+        @apply py-[2px] rounded-lg mx-8 flex items-center justify-center
+    }
+    
+    .badge-new{
+        @apply bg-green-400 text-white
+    }
+
+    .badge-closed{
+        @apply bg-red-400 text-white
+    }
+    .btn {
+        @apply p-2 font-semibold w-full rounded-md mt-4 cursor-pointer flex justify-center items-center hover:scale-[0.98] transition-all duration-200
+    }
+
+    .btn-primary{
+        @apply bg-black text-white border-2 border-black
+    }
+
+    .btn-secondary{
+        @apply bg-white text-black border-2 border-black
+    }
+}
